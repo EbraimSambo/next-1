@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const CatEventPage = ({data}) =>{
+const CatEventPage = ({data, pageName}) =>{
     return(
         <div>
-            <h2>Evento em Londres</h2>
+           <h2> Eventos em {pageName} </h2>
             {data.map(ev=>(
                 <Link key={ev.id} href={`${ev.city}/${ev.id}`}>
                 <Image alt={ev.title} height={400} width={400} src={ev.image} />

@@ -1,9 +1,8 @@
 import Link from "next/link"
-import styles from '../../../styles/Home.module.css'
-export const Footer = ({data})=> {
+export const Footer = ()=> {
        
     return(
-        <footer class={styles.footer}>
+        <footer >
            <p> &copy; Websoluções num turial com </p>
         </footer>
     )
