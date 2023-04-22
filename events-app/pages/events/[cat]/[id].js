@@ -1,15 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import SingleEvents from '@/src/components/events/singleEvents';
 
 const SingleEventPage = ({data}) =>{
     return(
-           <div>  
-            <h2> {data.title} </h2>
-            <Image alt={data.title} src={data.image} width={500} height={400} />
-            <p> {data.description} </p>
-            <input type='email' placeholder='Insira seu email' /> <button> Enviar</button>
-           </div>
-
+      <SingleEvents data={data} />
     )
 }
 
