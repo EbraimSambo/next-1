@@ -3,10 +3,11 @@ import Image from 'next/image';
 
 const SingleEventPage = ({data}) =>{
     return(
-           <div>
-            <Image alt={data.title} src={data.image} width={500} height={400} />
+           <div>  
             <h2> {data.title} </h2>
+            <Image alt={data.title} src={data.image} width={500} height={400} />
             <p> {data.description} </p>
+            <input type='email' placeholder='Insira seu email' /> <button> Enviar</button>
            </div>
 
     )
@@ -35,7 +36,6 @@ export async function getStaticPaths() {
   }
   
   export async function getStaticProps(context) {
-    console.log(context);
     const id = context.params.id;
     const { allEvents } = await import('../../../data/date.json');
     const eventData = allEvents.find((ev) => id === ev.id);

@@ -6,7 +6,7 @@ import Image from 'next/image';
 const EventPage = ({ data }) => {
     return (
         <div>
-            <h2>Nossos Eventos</h2>
+            <h2 className="title">Nossos Eventos</h2>
            <div className="events">
             {data.map(ev =>(
                <Link className="card" passHref key={ev.id} href={`/events/${ev.id}`}>
